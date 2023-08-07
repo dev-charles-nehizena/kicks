@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    scroll-behavior: smooth;
+    max-width: 100%;
+    font-family: "poppins";
+}
+
+body {
+    color: #0a0922;
+    scrollbar-width: #5138ed;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.nav-links {
+    transition: 0.7s ease;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hambuger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #1270FE;
+}
+
+.nav-left {
+    display: flex;
+}
+
+.logo {
+    color: #000;
+    font-size: 33px;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.btn1 {
+    border-radius: 15px;
+    color: #000;
+    padding: 0.2rem 2rem;
+    background: #FFF;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25) inset;
+}
+
+.notify {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    .hambuger {
+        display: block;
+    }
+
+    .hambuger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hambuger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hambuger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar {
+        padding: 02rem;
+    }
+
+    .review {
+        gap: 3rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+        height: 60vh;
+        text-align: center;
+        transition: 0.3s;
+        background-color: #fff;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
